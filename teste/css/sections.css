@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.loader {
+    width: 20px;
+    height: 20px;
+    border: 3px solid gray;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+
+
+.pkmn_list {
+    padding: 5px;
+}
+
+.pkmn_info {
+    width: 300px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    border: solid 3px #a5a5a5;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.pkmn_info .pkmn_sprite_container {
+    width: 100px;
+    height: 100px;
+    background: rgb(167,167,167);
+    background: linear-gradient(0deg, rgba(167,167,167,1) 0%, rgba(230,230,230,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pkmn_info .pkmn_sprite_container img {
+    position: absolute;
+}
+
+.pkmn_info .pkmn_sprite_container .pkmn_sprite_shiny {
+    display: none;
+}
+
+.pkmn_info .pkmn_sprite_container:hover .pkmn_sprite_shiny {
+    display: block;
+}
+
+.pkmn_info .pkmn_sprite_container:hover .pkmn_sprite_common {
+    display: none;
+}
+
+.pkmn_info .pkmn_attributes {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    width: calc(200px - 10px);
+    height: calc(100px - 10px);
+}
+
+.pkmn_info .pkmn_attributes h4{
+    margin-bottom: 5px;
+}
+
+.pkmn_info .pkmn_attributes .pkmn_number{
+    width: fit-content;
+    border-radius: 2px;
+    padding: 2px;
+    color: white;
+    background-color: #a7a7a7;
+}
+
+.pkmn_info .pkmn_attributes .grass_type{
+    width: fit-content;
+    border-radius: 2px;
+    padding: 2px;
+    color: white;
+    background-color: #7AC74C;
+}
+
+.pkmn_info .pkmn_attributes .fire_type{
+    width: fit-content;
+    border-radius: 2px;
+    padding: 2px;
+    color: white;
+    background-color: #EE8130;
+}
+
+.pkmn_info .pkmn_attributes .loader{
+    margin-top: 15px;
+    align-self: center;
+    justify-self: center;
+}
+
